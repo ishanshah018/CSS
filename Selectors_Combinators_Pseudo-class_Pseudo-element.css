@@ -1,0 +1,125 @@
+/* Universal Selector */
+
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Element Selector */
+h3
+{
+    color:blueviolet ;
+}
+
+h1
+{
+    color: #b92b27;
+}
+
+/* ID Selector */
+#login
+{
+    background-color: cadetblue;
+}
+
+#signup
+{
+    background-color: tomato;
+}
+
+/* Class Selector */
+
+.upvote
+{
+    background-color: green;
+}
+
+/* Descendant Selector */
+/* Here anchor tags written inside <p> only are selewcted*/
+p a{
+    color: darkmagenta;
+    background-color: lightcoral;
+}
+
+nav ul li a
+{
+    color: rgb(180, 170, 21);
+}
+
+/* Sibling Combinator */
+/* It means button written just after .upvote class are only affected */
+
+.upvote+button{
+    background-color: cornflowerblue;
+}
+
+/* Child Combinator */
+/* Here div is parent and input is child [all input inside div are affected] */
+
+div>input
+{
+    background-color: bisque;
+}
+
+/* Attribute Selector */
+
+input[type="text"]
+{
+    color:darkred;
+}
+
+input[type="password"]
+{
+    color:darkorchid;
+}
+/*-------------------------------------------------------------------------*/
+/*Pseudo Class*/
+
+/*Hover*/
+button:hover
+{
+    background-color: black;
+    color: white;
+}
+
+/* Active */
+
+button:active
+{
+    background-color: lightsalmon;
+}
+
+
+/*Checked*/
+
+input[type="radio"]:checked+label
+{
+    color:red;
+    font-weight:bold;
+}
+
+/* nth of type*/
+/* Here the 2nd .post class will be affected*/
+/* 
+.post:nth-of-type(2)
+{
+    background-color: rgb(30, 131, 131);
+} */
+
+
+div:nth-of-type(2n)
+{
+    background-color: rgb(170, 218, 218);
+}
+/*-----------------------------------------------------------------*/
+/*pseudo elements*/
+
+h1::first-letter
+{
+    color: green;
+}
+
+p::selection
+{
+    color: rgb(156, 105, 37);
+}
